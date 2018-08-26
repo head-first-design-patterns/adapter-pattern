@@ -16,13 +16,15 @@ We can have adapters of Iterator for old code and adapters of Enumerators for ne
 ### Understanding the code
 
 - This is a simulation of a Duck and a turkey adapting to be a duck
-- The TurkeyAdapter implements
+- The TurkeyAdapter implements a duck interface (target interface expected by a client) using a WildTurkey(Adaptee)
+- The client calls the target interface methods on TurkeyAdapter
+- In this way, the client is decoupled from the Adaptee
 
 ### Running the code
 
 ```
 cd src/
 javac DuckTestDrive.java
-
+java DuckTestDrive
 
 ```
